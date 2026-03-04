@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.env
+
+# Playwright artifacts
+test-results/
+reports/html/
+reports/results.json
+playwright-report/
+*.zip
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,26 @@
+{
+  "name": "playwright-todo-arch",
+  "version": "1.0.0",
+  "description": "Enterprise Playwright TypeScript suite – Driver + POM + Component architecture",
+  "author": "Saranya Manoharan",
+  "scripts": {
+    "test":             "playwright test",
+    "test:headed":      "playwright test --headed",
+    "test:ui":          "playwright test --ui",
+    "test:debug":       "playwright test --debug",
+    "test:report":      "playwright show-report reports/html",
+    "test:smoke":       "playwright test --grep @smoke",
+    "test:regression":  "playwright test --grep @regression",
+    "test:staging":     "BASE_URL=https://staging.demo.playwright.dev/todomvc playwright test",
+    "typecheck":        "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node":      "^20.0.0",
+    "typescript":       "^5.4.0",
+    "dotenv":           "^16.4.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.0"
+  }
+}
