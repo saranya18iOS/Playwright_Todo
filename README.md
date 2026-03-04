@@ -72,10 +72,9 @@ playwright-todo-arch/
 │   │   └── index.ts             # Custom Playwright fixtures
 │   └── specs/
 │       ├── todo-add.spec.ts     # TC-01 to TC-03
-│       ├── todo-complete.spec.ts# TC-04 to TC-06
-│       ├── todo-delete.spec.ts  # TC-07 to TC-08
-│       ├── todo-edit.spec.ts    # TC-09 to TC-10
-│       └── todo-filter.spec.ts  # TC-11 to TC-15
+│       ├── todo-complete.spec.ts# TC-04
+│       ├── todo-delete.spec.ts  # TC-05
+│       └── todo-edit.spec.ts    # TC-06
 ├── .github/workflows/
 │   └── playwright.yml           # Smoke → Regression pipeline
 ├── playwright.config.ts
@@ -86,25 +85,16 @@ playwright-todo-arch/
 
 ---
 
-## Test Cases (15 total)
+## Test Cases (6 total)
 
 | TC    | Spec            | Title                                        | Tags        |
 |-------|-----------------|----------------------------------------------|-------------|
 | TC-01 | todo-add        | Add single todo appears in list              | @smoke      |
 | TC-02 | todo-add        | Add multiple todos — all appear              | @regression |
 | TC-03 | todo-add        | Items-left counter reflects added todos      | @regression |
-| TC-04 | todo-complete   | Mark todo complete applies styling           | @smoke      |
-| TC-05 | todo-complete   | Completing decrements items-left counter     | @regression |
-| TC-06 | todo-complete   | Completing all shows zero items left         | @regression |
-| TC-07 | todo-delete     | Delete todo removes it from list             | @smoke      |
-| TC-08 | todo-delete     | Delete middle item leaves others intact      | @regression |
-| TC-09 | todo-edit       | Double-click edit replaces todo text         | @regression |
-| TC-10 | todo-edit       | Editing completed todo retains state         | @regression |
-| TC-11 | todo-filter     | Active filter shows only incomplete          | @smoke      |
-| TC-12 | todo-filter     | Completed filter shows only done             | @smoke      |
-| TC-13 | todo-filter     | All filter shows every todo                  | @regression |
-| TC-14 | todo-filter     | Clear completed removes done items           | @regression |
-| TC-15 | todo-filter     | Active filter link visually selected         | @regression |
+| TC-04 | todo-complete   | Mark todo complete applies completed styling | @smoke      |
+| TC-05 | todo-delete     | Delete todo removes it from list             | @smoke      |
+| TC-06 | todo-edit       | Double-click edit replaces the todo text     | @regression |
 
 ---
 
