@@ -16,10 +16,9 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: "20", cache: "npm" }
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
+      - run: npx playwright install --with-deps
       - name: Run smoke tests
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ENV: dev
         run: npx playwright test --grep @smoke
       - uses: actions/upload-artifact@v4
@@ -39,10 +38,9 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: "20", cache: "npm" }
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
+      - run: npx playwright install --with-deps
       - name: Run regression tests
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ENV: dev
         run: npx playwright test --grep @regression
       - uses: actions/upload-artifact@v4

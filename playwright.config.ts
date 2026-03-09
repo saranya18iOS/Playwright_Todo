@@ -23,7 +23,7 @@ export default defineConfig({
   // ── Global settings (driven by environment config) ─────────────────────────
   use: {
     baseURL:           currentEnv.baseUrl,
-    headless:          process.env.HEADLESS == "true",
+    headless:          process.env.CI ? true : process.env.HEADLESS == "true",
     screenshot:        "only-on-failure",
     video:             "retain-on-failure",
     trace:             "on-first-retry",
